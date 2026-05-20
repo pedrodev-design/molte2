@@ -2,34 +2,31 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5"/>
-  <title>Studio 62 — Arquitetura & Urbanismo · Goiânia</title>
-  <meta name="description" content="Studio 62 — escritório de arquitetura em Goiânia, Goiás. Projetos residenciais, comerciais e design de interiores."/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Studio Samba — Arquitetura & Design · Goiânia</title>
+  <meta name="description" content="Studio Samba — escritório de arquitetura e design de interiores em Goiânia. Daniele Uemura e Maria Júlia Ferreira."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-
-<!-- CURSOR -->
-<div id="cursor"></div>
-<div id="cursor-dot"></div>
+<body class="no-scroll">
 
 <!-- PRELOADER -->
 <div id="preloader">
-  <div class="pre-content">
-    <p class="pre-label">STUDIO 62</p>
+  <div class="pre-inner">
+    <img src="img/logo.png" alt="Studio Samba" class="pre-logo"/>
     <div class="pre-bar"><div class="pre-fill"></div></div>
-    <p class="pre-sub">Arquitetura & Urbanismo</p>
+    <p class="pre-sub">Arquitetura &amp; Design de Interiores</p>
   </div>
 </div>
 
 <!-- HEADER -->
-<header id="header">
-  <div class="hd-inner">
-    <a href="#hero" class="hd-logo">
-      <span class="logo-main">Studio</span><span class="logo-num">62</span>
+<header id="hd">
+  <div class="hd-wrap">
+    <a href="index.html" class="hd-logo" aria-label="Studio Samba">
+      <img src="img/logo.png" alt="Studio Samba" class="logo-w"/>
+      <img src="img/logo.png" alt="Studio Samba" class="logo-d"/>
     </a>
     <nav class="hd-nav">
       <a href="#sobre">Sobre</a>
@@ -37,15 +34,13 @@
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a href="tel:+556292505420" class="hd-cta">(62) 99250-5420</a>
-    <button class="hd-burger" id="burger" aria-label="Menu">
-      <span></span><span></span>
-    </button>
+    <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="hd-cta">Fale Conosco</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div class="mob-menu" id="mob-menu">
+<div class="mob" id="mob">
   <div class="mob-inner">
     <nav class="mob-nav">
       <a href="#sobre">Sobre</a>
@@ -53,303 +48,340 @@
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
     </nav>
-    <p class="mob-contact">(62) 99250-5420</p>
+    <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="mob-wa">WhatsApp →</a>
+    <div class="mob-links">
+      <a href="https://www.instagram.com/studiosamba/" target="_blank">Instagram</a>
+      <span>·</span>
+      <a href="https://br.pinterest.com/studiosamba/" target="_blank">Pinterest</a>
+    </div>
   </div>
 </div>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section id="hero" class="hero">
-  <div class="hero-img-wrap">
-    <img src="img/img-home.avif" alt="Studio 62" class="hero-img" id="hero-img"/>
+  <div class="hero-bg">
+    <img src="img/img-home.avif" alt="Studio Samba" class="hero-img"/>
   </div>
-  <div class="hero-overlay"></div>
-
-  <!-- top-left label -->
-  <div class="hero-loc">
-    <span class="hl-dot"></span>
-    Goiânia, Goiás
-  </div>
-
-  <!-- main text -->
+  <div class="hero-veil"></div>
+  <div class="hero-badge"><span class="badge-dot"></span>Goiânia, Goiás</div>
   <div class="hero-copy">
-    <p class="hero-eyebrow reveal">— Escritório de Arquitetura</p>
+    <p class="hero-eye">— Arquitetura &amp; Design de Interiores</p>
     <h1 class="hero-h1">
-      <span class="h1-line reveal">Projetan&shy;do</span>
-      <span class="h1-line italic reveal">o espaço</span>
-      <span class="h1-line reveal">dos seus</span>
-      <span class="h1-line reveal">sonhos</span>
+      <span class="hl">Espaços</span>
+      <span class="hl it">que contam</span>
+      <span class="hl">a sua</span>
+      <span class="hl">história</span>
     </h1>
+    <a href="#projetos" class="hero-btn">Ver Projetos →</a>
   </div>
-
-  <!-- bottom bar -->
-  <div class="hero-bar">
-    <div class="hbar-item">
-      <span class="hbar-label">Especialidade</span>
-      <span class="hbar-val">Arquitetura & Urbanismo</span>
-    </div>
-    <div class="hbar-sep"></div>
-    <div class="hbar-item">
-      <span class="hbar-label">Localização</span>
-      <span class="hbar-val">Goiânia e Região Metropolitana</span>
-    </div>
-    <div class="hbar-sep"></div>
-    <div class="hbar-item">
-      <span class="hbar-label">Horário</span>
-      <span class="hbar-val">Seg–Sex · 9h às 18h</span>
-    </div>
-    <div class="hbar-cta">
-      <a href="#contato">Fale Conosco →</a>
-    </div>
-  </div>
-
-  <!-- scroll -->
-  <div class="hero-scroll">
-    <div class="sc-line"></div>
-    <span>Scroll</span>
-  </div>
+  <div class="hero-scroll"><div class="sc-ln"></div><span>Scroll</span></div>
 </section>
 
-<!-- ══ SOBRE ══ -->
+<!-- SOBRE -->
 <section id="sobre" class="s-sobre">
-  <div class="container">
-    <div class="sobre-grid">
-      <div class="sobre-left">
-        <p class="sec-tag reveal">— Sobre o Studio</p>
-        <h2 class="sec-h2 reveal">
-          Incrível<br/>
-          <em>Arquiteto</em><br/>
-          em Goiânia
-        </h2>
-        <div class="stats-row">
-          <div class="stat-block reveal" data-delay="0">
-            <p class="stat-n" data-target="15">0</p>
-            <p class="stat-l">Anos de<br/>Experiência</p>
-          </div>
-          <div class="stat-block reveal" data-delay="150">
-            <p class="stat-n" data-target="120">0</p>
-            <p class="stat-l">Projetos<br/>Entregues</p>
-          </div>
+  <div class="ct">
+    <div class="sobre-g">
+      <div class="sobre-l">
+        <p class="tag rv">— O Studio</p>
+        <h2 class="h2 rv">Arquitetura<br/><em>com alma</em><br/>brasileira</h2>
+        <div class="portrait-wrap rv">
+          <img src="img/Sobre/FOTO-EM-_SOBRE-NOS_-683x1024.jpg" alt="Daniele Uemura e Maria Júlia Ferreira" class="portrait"/>
+          <p class="portrait-cap">Daniele Uemura &amp; Maria Júlia Ferreira</p>
         </div>
       </div>
-      <div class="sobre-right">
-        <p class="body-text reveal">
-          Se você está procurando um arquiteto para a reforma de sua casa ou
-          construção de uma propriedade comercial, <strong>Studio 62</strong> é a solução.
-          Trabalho com arquitetura e urbanismo há muitos anos — do planejamento,
-          passando pela revisão de projeto, até o início da construção.
-        </p>
-        <p class="body-text reveal" style="--d:.12s">
-          Meu escritório tem sede em Goiânia, mas atendo também outras regiões.
-          Ligue e vamos conversar sobre suas ideias e projetos.
-        </p>
-        <a href="tel:+556292505420" class="btn-sharp reveal" style="--d:.22s">
-          Agendar Conversa <span>→</span>
-        </a>
+      <div class="sobre-r">
+        <p class="body rv">A palavra <strong>'Samba'</strong> evoca uma das manifestações culturais mais vibrantes e multifacetadas do Brasil. Essa riqueza inspira e define nossa abordagem em arquitetura e design.</p>
+        <p class="body rv">Acreditamos na <strong>simplicidade, sensibilidade e atemporalidade</strong> como pilares da boa arquitetura. Cada projeto é desenvolvido priorizando funcionalidade, conforto e estética singular.</p>
+        <p class="body rv">Somos impulsionadas pela missão de criar espaços que transcendam a função utilitária, transformando-se em cenários de experiências e memórias.</p>
+        <div class="socias rv">
+          <div class="socia">
+            <p class="socia-n">Daniele Uemura</p>
+            <p class="socia-i">Arquiteta &amp; Sócia-Fundadora<br/>UCG · 2019</p>
+          </div>
+          <div class="socia">
+            <p class="socia-n">Maria Júlia Ferreira</p>
+            <p class="socia-i">Arquiteta &amp; Sócia-Fundadora<br/>UCG · 2020 · Neuro Arq. IPOG · 2024</p>
+          </div>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="btn-line rv">Conversar no WhatsApp <span>→</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ MARQUEE ══ -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <div class="mq-inner" id="mq">
-      <span>Arquitetura</span><span class="sep">·</span>
-      <span>Urbanismo</span><span class="sep">·</span>
-      <span>Interiores</span><span class="sep">·</span>
-      <span>Consultoria</span><span class="sep">·</span>
-      <span>Goiânia</span><span class="sep">·</span>
-      <span>Arquitetura</span><span class="sep">·</span>
-      <span>Urbanismo</span><span class="sep">·</span>
-      <span>Interiores</span><span class="sep">·</span>
-      <span>Consultoria</span><span class="sep">·</span>
-      <span>Goiânia</span><span class="sep">·</span>
-    </div>
-  </div>
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-track"><div class="mq-inner">
+    <span>Arquitetura</span><span class="sep">·</span>
+    <span>Design de Interiores</span><span class="sep">·</span>
+    <span>Neuro Arquitetura</span><span class="sep">·</span>
+    <span>Goiânia</span><span class="sep">·</span>
+    <span>Atemporalidade</span><span class="sep">·</span>
+    <span>Arquitetura</span><span class="sep">·</span>
+    <span>Design de Interiores</span><span class="sep">·</span>
+    <span>Neuro Arquitetura</span><span class="sep">·</span>
+    <span>Goiânia</span><span class="sep">·</span>
+    <span>Atemporalidade</span><span class="sep">·</span>
+  </div></div>
 </div>
 
-<!-- ══ SERVIÇOS ══ -->
-<section id="servicos" class="s-servicos">
-  <div class="container">
-    <div class="sec-hd">
-      <p class="sec-tag reveal">— O que Fazemos</p>
-      <h2 class="sec-h2 reveal">Nossos<br/><em>Serviços</em></h2>
+<!-- SERVIÇOS -->
+<section id="servicos" class="s-svc">
+  <div class="ct">
+    <div class="svc-hd">
+      <p class="tag rv">— O que Fazemos</p>
+      <h2 class="h2 rv">Nossos<br/><em>Serviços</em></h2>
     </div>
     <div class="svc-list">
-      <div class="svc-row reveal">
-        <span class="svc-num">01</span>
-        <div class="svc-body">
-          <h3 class="svc-title">Projetos de Arquitetura</h3>
-          <p class="svc-desc">Planejamento completo — da concepção à entrega. Análise criteriosa de área e soluções sob medida para residências e empreendimentos comerciais em Goiânia e região.</p>
+
+      <!-- 01 -->
+      <div class="svc-item rv">
+        <button class="svc-row" data-svc="arq" aria-expanded="false">
+          <span class="svc-n">01</span>
+          <div class="svc-body">
+            <h3 class="svc-t">Projetos de Arquitetura</h3>
+            <p class="svc-d">Do conceito à entrega: projetos residenciais e comerciais com atenção a cada detalhe.</p>
+          </div>
+          <span class="svc-arr">+</span>
+        </button>
+        <div class="svc-panel" id="svc-arq">
+          <div class="sp-inner">
+            <div class="sp-img-w"><img src="img/svc_arquitetura.png" alt="Projetos de Arquitetura" class="sp-img" loading="lazy"/></div>
+            <div class="sp-content">
+              <h4 class="sp-title">Projetos de Arquitetura</h4>
+              <p class="sp-text">Transformamos o seu terreno ou espaço em bruto em uma construção única — do primeiro esboço à planta executiva completa. Desenvolvemos projetos arquitetônicos residenciais e comerciais com foco total em funcionalidade, estética e valorização do imóvel.</p>
+              <ul class="sp-list">
+                <li>Projeto arquitetônico completo (conceitual, executivo e legal)</li>
+                <li>Estudo de viabilidade e aproveitamento do terreno</li>
+                <li>Compatibilização com projetos complementares</li>
+                <li>Acompanhamento de obra e visitas técnicas</li>
+                <li>Renderizações 3D fotorrealistas para validação visual</li>
+              </ul>
+              <p class="sp-ideal"><strong>Ideal para:</strong> quem vai construir do zero, reformar ou ampliar um imóvel residencial ou comercial.</p>
+              <a href="https://api.whatsapp.com/send?phone=5562999205107&text=Olá! Tenho interesse em Projeto de Arquitetura. Podemos conversar?" target="_blank" class="sp-cta">Quero meu Projeto de Arquitetura →</a>
+            </div>
+          </div>
         </div>
-        <span class="svc-arrow">→</span>
       </div>
-      <div class="svc-row reveal" style="--d:.1s">
-        <span class="svc-num">02</span>
-        <div class="svc-body">
-          <h3 class="svc-title">Consultoria On-line</h3>
-          <p class="svc-desc">Atendimento especializado à distância para todo o Brasil. Valide suas ideias, tire dúvidas e receba orientação profissional sem sair de casa.</p>
+
+      <!-- 02 -->
+      <div class="svc-item rv">
+        <button class="svc-row" data-svc="int" aria-expanded="false">
+          <span class="svc-n">02</span>
+          <div class="svc-body">
+            <h3 class="svc-t">Design de Interiores</h3>
+            <p class="svc-d">Ambientes que refletem quem você é — integrando conforto, materialidade e estética.</p>
+          </div>
+          <span class="svc-arr">+</span>
+        </button>
+        <div class="svc-panel" id="svc-int">
+          <div class="sp-inner">
+            <div class="sp-img-w"><img src="img/svc_interiores.png" alt="Design de Interiores" class="sp-img" loading="lazy"/></div>
+            <div class="sp-content">
+              <h4 class="sp-title">Design de Interiores</h4>
+              <p class="sp-text">Seu espaço precisa contar a sua história. Desenvolvemos projetos de interiores completos que unem beleza, funcionalidade e personalidade — curadoria de materiais, mobiliários, iluminação e decoração que elevam cada ambiente ao seu máximo potencial.</p>
+              <ul class="sp-list">
+                <li>Projeto executivo de interiores com plantas detalhadas</li>
+                <li>Seleção de revestimentos, materiais e acabamentos</li>
+                <li>Curadoria de mobiliário, luminárias e objetos decorativos</li>
+                <li>Layouts de iluminação por camadas (cênica, funcional e de destaque)</li>
+                <li>Gerenciamento de fornecedores e prazos</li>
+              </ul>
+              <p class="sp-ideal"><strong>Ideal para:</strong> quem quer transformar o interior de um apartamento, casa, escritório ou espaço comercial.</p>
+              <a href="https://api.whatsapp.com/send?phone=5562999205107&text=Olá! Tenho interesse em Design de Interiores. Podemos conversar?" target="_blank" class="sp-cta">Quero meu Projeto de Interiores →</a>
+            </div>
+          </div>
         </div>
-        <span class="svc-arrow">→</span>
       </div>
-      <div class="svc-row reveal" style="--d:.2s">
-        <span class="svc-num">03</span>
-        <div class="svc-body">
-          <h3 class="svc-title">Projeto de Interiores</h3>
-          <p class="svc-desc">Ambientes que refletem sua personalidade. Criamos espaços funcionais, únicos e com identidade — sua casa, seu estilo.</p>
+
+      <!-- 03 -->
+      <div class="svc-item rv">
+        <button class="svc-row" data-svc="neuro" aria-expanded="false">
+          <span class="svc-n">03</span>
+          <div class="svc-body">
+            <h3 class="svc-t">Neuro Arquitetura</h3>
+            <p class="svc-d">Espaços que dialogam com o bem-estar humano — ciência e sensibilidade em harmonia.</p>
+          </div>
+          <span class="svc-arr">+</span>
+        </button>
+        <div class="svc-panel" id="svc-neuro">
+          <div class="sp-inner">
+            <div class="sp-img-w"><img src="img/svc_neuro.png" alt="Neuro Arquitetura" class="sp-img" loading="lazy"/></div>
+            <div class="sp-content">
+              <h4 class="sp-title">Neuro Arquitetura</h4>
+              <p class="sp-text">A Neuro Arquitetura aplica conhecimentos das neurociências ao design de espaços — criando ambientes que reduzem o estresse, melhoram o foco, promovem o descanso e elevam a qualidade de vida. É a ciência do bem-estar integrada a cada decisão projetual.</p>
+              <ul class="sp-list">
+                <li>Análise sensorial do espaço (luz, cor, textura, acústica e fluxo)</li>
+                <li>Design biofílico — integração com natureza e elementos orgânicos</li>
+                <li>Paleta de cores com base na psicologia das cores</li>
+                <li>Planejamento de iluminação circadiana (ritmo natural do corpo)</li>
+                <li>Ambientes pensados para reduzir ansiedade e aumentar bem-estar</li>
+              </ul>
+              <p class="sp-ideal"><strong>Ideal para:</strong> quem busca um espaço que promova saúde mental, produtividade e qualidade de vida genuína.</p>
+              <a href="https://api.whatsapp.com/send?phone=5562999205107&text=Olá! Tenho interesse em Neuro Arquitetura. Podemos conversar?" target="_blank" class="sp-cta">Quero saber mais sobre Neuro Arq. →</a>
+            </div>
+          </div>
         </div>
-        <span class="svc-arrow">→</span>
       </div>
+
+      <!-- 04 -->
+      <div class="svc-item rv">
+        <button class="svc-row" data-svc="cons" aria-expanded="false">
+          <span class="svc-n">04</span>
+          <div class="svc-body">
+            <h3 class="svc-t">Consultoria On-line</h3>
+            <p class="svc-d">Orientação profissional especializada para todo o Brasil, sem sair de casa.</p>
+          </div>
+          <span class="svc-arr">+</span>
+        </button>
+        <div class="svc-panel" id="svc-cons">
+          <div class="sp-inner">
+            <div class="sp-img-w"><img src="img/svc_consultoria.png" alt="Consultoria On-line" class="sp-img" loading="lazy"/></div>
+            <div class="sp-content">
+              <h4 class="sp-title">Consultoria On-line</h4>
+              <p class="sp-text">Expertise Studio Samba disponível para qualquer lugar do Brasil. Nosso serviço de consultoria on-line oferece orientação profissional completa por videoconferência — ideal para quem está em outra cidade ou quer validar decisões de reforma com uma arquiteta antes de executar.</p>
+              <ul class="sp-list">
+                <li>Sessão de consultoria por videoconferência (60 ou 90 min)</li>
+                <li>Análise do espaço a partir de fotos e plantas enviadas pelo cliente</li>
+                <li>Orientação sobre layout, cores, materiais e mobiliário</li>
+                <li>Relatório escrito pós-sessão com todas as recomendações</li>
+                <li>Atendimento para todo o Brasil — sem custos de deslocamento</li>
+              </ul>
+              <p class="sp-ideal"><strong>Ideal para:</strong> quem mora fora de Goiânia, quer uma segunda opinião ou precisa de direção profissional para uma reforma pontual.</p>
+              <a href="https://api.whatsapp.com/send?phone=5562999205107&text=Olá! Tenho interesse na Consultoria On-line. Podemos conversar?" target="_blank" class="sp-cta">Agendar minha Consultoria →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="svc-cta rv">
+      <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="btn-line">Solicitar Orçamento <span>→</span></a>
     </div>
   </div>
 </section>
 
-<!-- ══ PROJETOS ══ -->
-<section id="projetos" class="s-projetos">
-  <div class="container">
-    <div class="sec-hd">
-      <p class="sec-tag reveal">— Portfólio</p>
-      <h2 class="sec-h2 reveal">Projetos<br/><em>Realizados</em></h2>
+
+
+<!-- PROJETOS -->
+<section id="projetos" class="s-proj">
+  <div class="ct">
+    <div class="proj-hd">
+      <p class="tag rv">— Portfólio</p>
+      <h2 class="h2 rv">Projetos<br/><em>Realizados</em></h2>
     </div>
   </div>
-
   <div class="proj-grid">
-    <div class="proj-cell large reveal">
-      <div class="proj-img-wrap">
-        <img src="img/proj-1.jpg" alt="Residência Contemporânea" class="proj-img"/>
-      </div>
-      <div class="proj-info">
-        <span class="pi-num">01</span>
-        <div>
-          <h3 class="pi-title">Residência Contemporânea</h3>
-          <p class="pi-meta">Goiânia, GO · Residencial · 2024</p>
+    <a href="refugio.html" class="proj-card rv">
+      <div class="pc-img-w">
+        <img src="img/Apartamento Refugio/R0_LIVING-02.jpg" alt="Apartamento Refúgio" class="pc-img" loading="lazy"/>
+        <div class="pc-overlay">
+          <span class="pc-name">Apartamento Refúgio</span>
+          <span class="pc-cat">Interiores Residencial</span>
         </div>
       </div>
-    </div>
-
-    <div class="proj-cell reveal" style="--d:.1s">
-      <div class="proj-img-wrap">
-        <img src="img/proj-2.jpg" alt="Espaço Comercial" class="proj-img"/>
-      </div>
-      <div class="proj-info">
-        <span class="pi-num">02</span>
-        <div>
-          <h3 class="pi-title">Espaço Comercial</h3>
-          <p class="pi-meta">Goiânia, GO · Comercial · 2023</p>
+    </a>
+    <a href="bossa.html" class="proj-card rv">
+      <div class="pc-img-w">
+        <img src="img/Apartamento Bossa/FotosIDVidaUrbana-1-scaled.jpg" alt="Apartamento Bossa" class="pc-img" loading="lazy"/>
+        <div class="pc-overlay">
+          <span class="pc-name">Apartamento Bossa</span>
+          <span class="pc-cat">Interiores Residencial</span>
         </div>
       </div>
-    </div>
-
-    <div class="proj-cell reveal" style="--d:.2s">
-      <div class="proj-img-wrap">
-        <img src="img/proj-3.jpg" alt="Suite Master Design" class="proj-img"/>
-      </div>
-      <div class="proj-info">
-        <span class="pi-num">03</span>
-        <div>
-          <h3 class="pi-title">Suite Master Design</h3>
-          <p class="pi-meta">Goiânia, GO · Interiores · 2024</p>
+    </a>
+    <a href="jane.html" class="proj-card rv">
+      <div class="pc-img-w">
+        <img src="img/Apartamento Jane/FotosCoteD_or-2.jpg" alt="Apartamento Jane" class="pc-img" loading="lazy"/>
+        <div class="pc-overlay">
+          <span class="pc-name">Apartamento Jane</span>
+          <span class="pc-cat">Interiores Residencial</span>
         </div>
       </div>
-    </div>
-
-    <div class="proj-cell large reveal" style="--d:.1s">
-      <div class="proj-img-wrap">
-        <img src="img/proj-4.jpg" alt="Complexo Residencial" class="proj-img"/>
-      </div>
-      <div class="proj-info">
-        <span class="pi-num">04</span>
-        <div>
-          <h3 class="pi-title">Complexo Residencial</h3>
-          <p class="pi-meta">Região Metropolitana, GO · 2023</p>
+    </a>
+    <a href="casacj.html" class="proj-card rv">
+      <div class="pc-img-w">
+        <img src="img/Casa CJ/SALA-1.jpg" alt="Casa CJ" class="pc-img" loading="lazy"/>
+        <div class="pc-overlay">
+          <span class="pc-name">Casa CJ</span>
+          <span class="pc-cat">Arquitetura &amp; Interiores</span>
         </div>
       </div>
-    </div>
+    </a>
+    <a href="casasena.html" class="proj-card rv">
+      <div class="pc-img-w">
+        <img src="img/Casa Sena/R0_COZINHA-01-2.jpg" alt="Casa Sena" class="pc-img" loading="lazy"/>
+        <div class="pc-overlay">
+          <span class="pc-name">Casa Sena</span>
+          <span class="pc-cat">Arquitetura &amp; Interiores</span>
+        </div>
+      </div>
+    </a>
+    <a href="studio48.html" class="proj-card rv">
+      <div class="pc-img-w">
+        <img src="img/Studio 48/enhanced-image-1.jpg" alt="Studio 48" class="pc-img" loading="lazy"/>
+        <div class="pc-overlay">
+          <span class="pc-name">Studio 48</span>
+          <span class="pc-cat">Arquitetura Residencial</span>
+        </div>
+      </div>
+    </a>
   </div>
 </section>
 
-<!-- ══ MANIFESTO ══ -->
-<section class="s-manifesto">
-  <div class="container">
-    <blockquote class="manifesto reveal">
-      "É possível criar com você um espaço que não só atenda suas
-      necessidades e expectativas, mas também
-      <em>reflita sua personalidade.</em>
-      Deixe-se inspirar!"
-    </blockquote>
-    <cite class="manifesto-cite reveal">— Studio 62, Goiânia</cite>
+<!-- MANIFESTO -->
+<section class="s-mani">
+  <div class="ct">
+    <blockquote class="mani rv">"Acreditamos na simplicidade, na sensibilidade e na atemporalidade como pilares da boa arquitetura. <em>Cada projeto é uma história, cada espaço, uma memória.</em>"</blockquote>
+    <cite class="mani-cite rv">— Studio Samba, Goiânia</cite>
+    <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="btn-dark rv">Iniciar meu Projeto →</a>
   </div>
 </section>
 
-<!-- ══ CONTATO ══ -->
-<section id="contato" class="s-contato">
-  <div class="container">
-    <div class="ct-grid">
-      <div class="ct-left">
-        <p class="sec-tag reveal">— Entre em Contato</p>
-        <h2 class="sec-h2 reveal">Vamos<br/>criar<br/><em>juntos</em></h2>
-        <p class="body-text reveal" style="--d:.1s">
-          Do planejamento à entrega, ao seu lado em cada etapa.
-          Agende uma visita e transforme suas ideias em realidade.
-        </p>
-
-        <div class="ct-info reveal" style="--d:.15s">
-          <div class="ct-row">
-            <span class="ct-label">Telefone</span>
-            <a href="tel:+556292505420" class="ct-val">(62) 99250-5420</a>
-          </div>
-          <div class="ct-row">
-            <span class="ct-label">E-mail</span>
-            <a href="mailto:hyago.v@hotmail.com" class="ct-val">hyago.v@hotmail.com</a>
-          </div>
-          <div class="ct-row">
-            <span class="ct-label">Endereço</span>
-            <span class="ct-val">Rua 402, Goiânia – GO<br/>CEP 74650-330</span>
-          </div>
+<!-- CONTATO -->
+<section id="contato" class="s-ct">
+  <div class="ct">
+    <div class="ct-g">
+      <div class="ct-l">
+        <p class="tag rv">— Entre em Contato</p>
+        <h2 class="h2 rv">Vamos<br/>criar<br/><em>juntos</em></h2>
+        <p class="body rv">Conte-nos sobre seu projeto. Do planejamento à entrega, ao seu lado em cada etapa.</p>
+        <div class="ct-info rv">
+          <div class="ct-row"><span class="ct-lbl">WhatsApp</span><a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="ct-v">(62) 99920-5107</a></div>
+          <div class="ct-row"><span class="ct-lbl">E-mail</span><a href="mailto:contato@studiosamba.com.br" class="ct-v">contato@studiosamba.com.br</a></div>
+          <div class="ct-row"><span class="ct-lbl">Instagram</span><a href="https://www.instagram.com/studiosamba/" target="_blank" class="ct-v">@studiosamba</a></div>
+          <div class="ct-row"><span class="ct-lbl">Localização</span><span class="ct-v">Goiânia – GO</span></div>
         </div>
-
-        <div class="horario reveal" style="--d:.2s">
-          <p class="h-title">Horário de Funcionamento</p>
-          <div class="h-grid">
-            <span>Segunda – Sexta</span><span>9h às 18h</span>
-            <span>Sábado</span><span class="closed">Fechado</span>
-            <span>Domingo</span><span class="closed">Fechado</span>
-          </div>
+        <div class="ct-social rv">
+          <a href="https://www.instagram.com/studiosamba/" target="_blank" class="soc-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://br.pinterest.com/studiosamba/" target="_blank" class="soc-btn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="soc-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
         </div>
       </div>
-
-      <div class="ct-right">
-        <form class="ct-form reveal" id="ct-form" novalidate>
+      <div class="ct-r">
+        <form class="ct-form rv" id="ct-form" novalidate>
           <h3 class="form-ttl">Envie uma Mensagem</h3>
-          <div class="fg">
-            <label>Nome *</label>
-            <input type="text" name="nome" placeholder="Como posso te chamar?" required/>
-          </div>
-          <div class="fg">
-            <label>E-mail *</label>
-            <input type="email" name="email" placeholder="email@exemplo.com" required/>
-          </div>
-          <div class="fg">
-            <label>Telefone</label>
-            <input type="tel" name="tel" placeholder="(62) 00000-0000"/>
-          </div>
+          <div class="fg"><label>Nome *</label><input type="text" name="nome" placeholder="Seu nome" required/></div>
+          <div class="fg"><label>E-mail *</label><input type="email" name="email" placeholder="email@exemplo.com" required/></div>
+          <div class="fg"><label>WhatsApp</label><input type="tel" name="tel" placeholder="(62) 00000-0000"/></div>
           <div class="fg">
             <label>Serviço</label>
             <select name="servico">
               <option value="">Selecione...</option>
               <option>Projeto de Arquitetura</option>
+              <option>Design de Interiores</option>
+              <option>Neuro Arquitetura</option>
               <option>Consultoria On-line</option>
-              <option>Projeto de Interiores</option>
             </select>
           </div>
-          <div class="fg">
-            <label>Mensagem *</label>
-            <textarea name="msg" rows="4" placeholder="Conte sobre seu projeto..." required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">
-            <span class="bs-text">Enviar Mensagem</span>
-            <span class="bs-arrow">→</span>
-          </button>
+          <div class="fg"><label>Mensagem *</label><textarea name="msg" rows="4" placeholder="Conte sobre seu projeto..." required></textarea></div>
+          <button type="submit" class="btn-submit"><span class="bs-t">Enviar Mensagem</span><span>→</span></button>
           <p class="form-ok" id="form-ok">✓ Mensagem enviada! Entraremos em contato em breve.</p>
         </form>
       </div>
@@ -357,28 +389,41 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
+  <div class="ct">
     <div class="ft-top">
-      <p class="ft-logo">Studio 62</p>
+      <div class="ft-brand">
+        <img src="img/logo.png" alt="Studio Samba" class="ft-logo"/>
+        <p class="ft-tag">Arquitetura &amp; Design de Interiores · Goiânia</p>
+      </div>
       <nav class="ft-nav">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
       </nav>
-      <div class="ft-right">
-        <a href="tel:+556292505420">(62) 99250-5420</a>
-        <a href="mailto:hyago.v@hotmail.com">hyago.v@hotmail.com</a>
+      <div class="ft-r">
+        <a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank">(62) 99920-5107</a>
+        <a href="mailto:contato@studiosamba.com.br">contato@studiosamba.com.br</a>
+        <div class="ft-soc">
+          <a href="https://www.instagram.com/studiosamba/" target="_blank">Instagram</a>
+          <span>·</span>
+          <a href="https://br.pinterest.com/studiosamba/" target="_blank">Pinterest</a>
+        </div>
       </div>
     </div>
     <div class="ft-bot">
-      <p>&copy; <span id="yr"></span> Studio 62. Todos os direitos reservados.</p>
-      <p>Rua 402, Goiânia – GO · CEP 74650-330</p>
+      <p>© <span id="yr"></span> Studio Samba. Todos os direitos reservados.</p>
+      <p>Daniele Uemura &amp; Maria Júlia Ferreira · Goiânia – GO</p>
     </div>
   </div>
 </footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://api.whatsapp.com/send?phone=5562999205107" target="_blank" class="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
 <script src="main.js" defer></script>
 </body>
