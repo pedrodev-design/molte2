@@ -8,13 +8,43 @@ a{text-decoration:none;color:inherit}
 button{border:none;background:none;font:inherit;cursor:pointer}
 
 /* ── PRELOADER ── */
-#preloader{position:fixed;inset:0;background:#faf9f7;z-index:9000;display:flex;align-items:center;justify-content:center;transition:opacity .8s ease}
-#preloader.gone{opacity:0;pointer-events:none}
-.pre-inner{display:flex;flex-direction:column;align-items:center;gap:24px}
-.pre-logo{height:48px;width:auto;opacity:.7}
-.pre-bar{width:180px;height:1px;background:#e0ddd8}
-.pre-fill{height:1px;width:0;background:#111;transition:width 2s cubic-bezier(.4,0,.2,1)}
-.pre-sub{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:#bbb}
+#preloader{position:fixed;inset:0;z-index:9000;pointer-events:all}
+#preloader.gone .pre-top{transform:translateY(-101%)}
+#preloader.gone .pre-bot{transform:translateY(101%)}
+#preloader.gone .pre-center{opacity:0;transform:translate(-50%,-50%) scale(.96)}
+#preloader.gone{pointer-events:none}
+
+/* Dois painéis que se abrem (split reveal) */
+.pre-panel{position:absolute;left:0;right:0;background:#0e0d0b;transition:transform .9s cubic-bezier(.76,0,.24,1)}
+.pre-top{top:0;height:51%}
+.pre-bot{bottom:0;height:51%}
+
+/* Centro flutuante com logo + barra */
+.pre-center{
+  position:fixed;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;align-items:center;gap:22px;
+  transition:opacity .5s ease, transform .5s ease;
+  z-index:9001;
+}
+.pre-logo{
+  height:56px;width:auto;
+  filter:brightness(0) invert(1);
+  opacity:0;transform:translateY(12px);
+  animation:pre-logo-in .9s cubic-bezier(.16,1,.3,1) .3s forwards;
+}
+@keyframes pre-logo-in{to{opacity:.92;transform:translateY(0)}}
+
+.pre-bar{width:140px;height:1px;background:rgba(255,255,255,.08);overflow:hidden}
+.pre-fill{height:1px;width:0;background:rgba(255,255,255,.5);transition:width 1.8s cubic-bezier(.4,0,.15,1)}
+
+.pre-label{
+  font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;
+  color:rgba(255,255,255,.25);
+  opacity:0;transform:translateY(6px);
+  animation:pre-label-in .7s ease .7s forwards;
+}
+@keyframes pre-label-in{to{opacity:1;transform:translateY(0)}}
 
 /* ── HEADER ── */
 #hd{position:fixed;top:0;left:0;right:0;z-index:800;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
@@ -23,7 +53,7 @@ button{border:none;background:none;font:inherit;cursor:pointer}
 .hd-logo{position:relative;width:100px;height:28px;flex-shrink:0}
 .hd-logo img{position:absolute;top:0;left:0;height:28px;width:auto;object-fit:contain;transition:opacity .4s}
 .logo-w{filter:brightness(0) invert(1);opacity:1}
-.logo-d{filter:brightness(0);opacity:0}
+.logo-d{filter:none;opacity:0}
 #hd.solid .logo-w{opacity:0}
 #hd.solid .logo-d{opacity:1}
 .hd-nav{display:flex;gap:28px}
@@ -97,7 +127,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .portrait-wrap{margin-top:28px;padding-top:24px;border-top:1px solid #e8e4de}
 .portrait{width:100%;max-width:280px;aspect-ratio:2/3;object-fit:cover;object-position:top}
 .portrait-cap{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#bbb;margin-top:10px}
-.socias{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid #e8e4de}
+.socias{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid #e8e4de}
 .socia{padding:16px;background:#fff;border:1px solid #ece9e3}
 .socia-n{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#111;margin-bottom:4px}
 .socia-i{font-size:.7rem;line-height:1.7;color:#aaa}
@@ -106,7 +136,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 @media(max-width:760px){
   .sobre-g{grid-template-columns:1fr}
   .portrait{max-width:100%}
-  .socias{grid-template-columns:1fr 1fr}
+  .socias{grid-template-columns:1fr}
 }
 @media(max-width:400px){.socias{grid-template-columns:1fr}}
 
@@ -161,6 +191,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .s-proj{background:#111;padding:clamp(3.5rem,7vw,6rem) 0 0}
 .s-proj .tag{color:#555}
 .s-proj .h2{color:#fff}
+.proj-sub{font-size:.88rem;line-height:1.8;color:#555;max-width:560px;margin-top:14px}
 .proj-hd{margin-bottom:clamp(2rem,4vw,3.5rem)}
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:0}
 .proj-card{display:block;overflow:hidden;background:#1a1a1a;text-decoration:none}
@@ -216,7 +247,7 @@ a.ct-v:hover{color:#fff}
 /* ── FOOTER ── */
 .footer{background:#0a0a0a;border-top:1px solid rgba(255,255,255,.04);padding:clamp(2.5rem,5vw,4rem) 0 1.5rem}
 .ft-top{display:grid;grid-template-columns:1fr auto auto;gap:clamp(1.5rem,4vw,3rem);align-items:start;margin-bottom:36px}
-.ft-logo{height:32px;width:auto;filter:brightness(0) invert(.4);margin-bottom:6px}
+.ft-logo{height:32px;width:auto;filter:brightness(0) invert(.35);margin-bottom:6px}
 .ft-tag{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#2a2a2a}
 .ft-nav{display:flex;flex-direction:column;gap:7px}
 .ft-nav a{font-size:.68rem;color:#3a3a3a;letter-spacing:.12em;text-transform:uppercase;transition:color .2s}

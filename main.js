@@ -1,14 +1,17 @@
-// ── STUDIO SAMBA · main.js ────────────────────────
+// ── PLANO STUDIO · main.js ────────────────────────
 
 // ═══════════════════════════════════
 // PRELOADER
 // ═══════════════════════════════════
 const pre  = document.getElementById('preloader');
-const fill = document.querySelector('.pre-fill');
 
 if (pre) {
   window.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(() => { fill.style.width = '100%'; });
+    // Inicia a barra de progresso
+    const fill = document.getElementById('pre-fill');
+    if (fill) requestAnimationFrame(() => { fill.style.width = '100%'; });
+
+    // Após 2.4s aciona o split reveal
     setTimeout(() => {
       pre.classList.add('gone');
       document.body.classList.remove('no-scroll');
